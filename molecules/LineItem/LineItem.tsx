@@ -1,15 +1,18 @@
 import * as React from "react";
+import { Item } from "../../redux/types";
 import { Styles } from "./LineItem.style";
 
-interface Props {}
+interface Props {
+  item: Item;
+}
 
-const LineItem: React.FC<Props> = ({}) => (
+const LineItem: React.FC<Props> = ({ item }) => (
   <Styles.Container>
     <Styles.ImgContainer />
     <Styles.InfoContainer>
-      <Styles.Title>Fuji Sushui</Styles.Title>
-      <Styles.Type>Restaurant</Styles.Type>
-      <Styles.Adress>Avenu le Cair Tetouan 93000</Styles.Adress>
+      <Styles.Title>{item.title}</Styles.Title>
+      <Styles.Type>{item.category.name}</Styles.Type>
+      <Styles.Adress>{`${item.adress} ${item.ville.name}`}</Styles.Adress>
     </Styles.InfoContainer>
   </Styles.Container>
 );

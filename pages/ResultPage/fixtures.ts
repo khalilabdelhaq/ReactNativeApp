@@ -1,23 +1,21 @@
-export interface Item {
-  title: string;
-  type: string;
-  adress: string;
-}
-
+import { Item } from "../../redux/types";
 export const mockedItems: Item[] = [
   {
     title: "Fuji Sushi",
-    type: "Restaurant",
-    adress: "Tetouan,Maroc",
+    category: { id: 1, name: "Restaurant" },
+    adress: "Avenu le caire",
+    ville: { id: 1, name: "Tetouan" },
   },
   {
     title: "Ryad alkhair",
-    type: "Ryad",
-    adress: "Tetouan,Maroc",
+    category: { id: 2, name: "Hotel" },
+    adress: "Ibn Batouta",
+    ville: { id: 1, name: "Tetouan" },
   },
   {
-    title: "Fuji Sushi",
-    type: "",
-    adress: "Tetouan,Maroc",
+    title: "Assur",
+    category: { id: 2, name: "Asurance" },
+    adress: "TAvenue Challa",
+    ville: { id: 1, name: "Tetouan" },
   },
 ];

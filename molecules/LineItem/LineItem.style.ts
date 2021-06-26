@@ -1,19 +1,20 @@
 import styled from "styled-components";
 
 export const Styles = {
-  Container: styled.div`
+  Container: styled.view`
     display: flex;
     flex-direction: row;
-    min-height: 60px;
+    height: 60px;
     margin-bottom: 5px;
+    font-family: "Century Gothic";
   `,
-  ImgContainer: styled.div`
+  ImgContainer: styled.view`
     width: 30%;
     border: solid 1px grey;
     border-radius: 5px;
     margin-right: 10px;
   `,
-  InfoContainer: styled.div`
+  InfoContainer: styled.view`
     display: flex;
     flex-direction: column;
     width: 70%;
