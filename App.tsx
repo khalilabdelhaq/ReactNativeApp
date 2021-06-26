@@ -4,14 +4,21 @@ import { StyleSheet, View } from "react-native";
 import ResultPage from "./pages/ResultPage";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
+  const Drawer = createDrawerNavigator();
   return (
     <Provider store={store}>
-      <View style={styles.container}>
-        <ResultPage />
-        <StatusBar style="auto" />
-      </View>
+      <NavigationContainer>
+        <Drawer.Navigator initialRouteName="Home">
+          <Drawer.Screen name="Accueil" component={ResultPage} />
+          <Drawer.Screen name="Ajouter un lieu" component={ResultPage} />
+          <Drawer.Screen name="Trouver un lieu" component={ResultPage} />
+          <Drawer.Screen name="Localiser un lieu" component={ResultPage} />
+        </Drawer.Navigator>
+      </NavigationContainer>
     </Provider>
   );
 }

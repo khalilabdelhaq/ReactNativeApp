@@ -11,8 +11,8 @@ const ResultPage: React.FC<Props> = ({}) => {
   return (
     <>
       <Styles.Container>
-        {items.map((item) => (
-          <LineItem item={item} />
+        {items.map((item, index) => (
+          <LineItem key={index} item={item} />
         ))}
       </Styles.Container>
     </>
