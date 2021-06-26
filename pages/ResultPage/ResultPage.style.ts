@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from "styled-components/native";
 
 export const Styles = {
-  Container: styled.view`
+  Container: styled.View`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
