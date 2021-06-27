@@ -8,7 +8,7 @@ interface Props {
 
 const LineItem: React.FC<Props> = ({ item }) => (
   <Styles.Container>
-    <Styles.ImgContainer />
+    <Styles.ImgContainer></Styles.ImgContainer>
     <Styles.InfoContainer>
       <Styles.Title>{item.title}</Styles.Title>
       <Styles.Type>{item.category.name}</Styles.Type>

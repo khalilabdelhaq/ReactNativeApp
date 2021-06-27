@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
+import SearchPage from "./pages/SearchPage";
 
 export default function App() {
   const Drawer = createDrawerNavigator();
@@ -15,7 +16,7 @@ export default function App() {
         <Drawer.Navigator initialRouteName="Home">
           <Drawer.Screen name="Accueil" component={ResultPage} />
           <Drawer.Screen name="Ajouter un lieu" component={ResultPage} />
-          <Drawer.Screen name="Trouver un lieu" component={ResultPage} />
+          <Drawer.Screen name="Trouver un lieu" component={SearchPage} />
           <Drawer.Screen name="Localiser un lieu" component={ResultPage} />
         </Drawer.Navigator>
       </NavigationContainer>

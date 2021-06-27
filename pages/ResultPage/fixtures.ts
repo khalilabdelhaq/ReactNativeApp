@@ -1,4 +1,4 @@
-import { Item } from "../../redux/types";
+import { Category, Item, Ville } from "../../redux/types";
 export const mockedItems: Item[] = [
   {
     title: "Fuji Sushi",
@@ -14,8 +14,33 @@ export const mockedItems: Item[] = [
   },
   {
     title: "Assur",
-    category: { id: 2, name: "Asurance" },
+    category: { id: 3, name: "Asurance" },
     adress: "TAvenue Challa",
     ville: { id: 1, name: "Tetouan" },
   },
+];
+
+export const mockedVilles: Ville[] = [
+  {
+    id: 1,
+    name: "Tetouan",
+  },
+  {
+    id: 2,
+    name: "Casablanca",
+  },
+  {
+    id: 3,
+    name: "Rabat",
+  },
+  {
+    id: 4,
+    name: "Fnideq",
+  },
+];
+
+export const mockedCategories: Category[] = [
+  { id: 1, name: "Restaurant" },
+  { id: 2, name: "Hotel" },
+  { id: 3, name: "Asurance" },
 ];
