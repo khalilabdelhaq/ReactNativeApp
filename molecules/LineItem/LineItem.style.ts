@@ -16,6 +16,11 @@ export const Styles = {
     height: 100px;
     width: 100px;
   `,
+  Img: styled.Image`
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+  `,
   InfoContainer: styled.View`
     display: flex;
     flex-direction: column;

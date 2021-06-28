@@ -1,8 +1,11 @@
+import { ImageSourcePropType } from "react-native";
+
 export interface Item {
   title: string;
   category: Category;
   adress: string;
   ville: Ville;
+  img?: ImageSourcePropType;
 }
 
 export interface Filer {
