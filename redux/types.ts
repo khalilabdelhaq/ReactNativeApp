@@ -2,9 +2,9 @@ import { ImageSourcePropType } from "react-native";
 
 export interface Item {
   title: string;
-  category: Category;
+  category: Category | undefined;
   adress: string;
-  ville: Ville;
+  ville: Ville | undefined;
   img?: ImageSourcePropType;
 }
 

@@ -1,4 +1,8 @@
-import { mockedItems } from "../pages/ResultPage/fixtures";
+import {
+  mockedCategories,
+  mockedItems,
+  mockedVilles,
+} from "../pages/ResultPage/fixtures";
 import { ADD_ITEM, FILTER_ITEMS, ItemState, ItemActionTypes } from "./types";
 
 const initialItemState: ItemState = {
@@ -14,6 +18,22 @@ export function itemReducer(
     case ADD_ITEM: {
       return {
         ...state,
+        items: [
+          ...state.items,
+          {
+            title: action.payload.title,
+            adress: action.payload.adress,
+            category: mockedCategories.find(
+              (item) =>
+                !!action.payload.category &&
+                item.id === action.payload.category.id
+            ),
+            ville: mockedVilles.find(
+              (item) =>
+                action.payload.ville && item.id === action.payload.ville.id
+            ),
+          },
+        ],
       };
     }
     case FILTER_ITEMS: {
@@ -21,7 +41,9 @@ export function itemReducer(
         ...state,
         filteredItems: state.items.filter(
           (item) =>
+            item.ville &&
             item.ville.id === action.payload.ville &&
+            item.category &&
             item.category.id === action.payload.category
         ),
       };

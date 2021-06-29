@@ -28,13 +28,6 @@ export const mockedItems: Item[] = [
     ville: { id: 1, name: "Tetouan" },
     img: require("../../assets/Hotel-2.jpg"),
   },
-  {
-    title: "Restaurant Ifoulki",
-    category: { id: 1, name: "Restaurant" },
-    adress: "TAvenue Challa",
-    ville: { id: 1, name: "Tetouan" },
-    img: require("../../assets/Restaurant-2.jpg"),
-  },
 ];
 
 export const mockedVilles: Ville[] = [
